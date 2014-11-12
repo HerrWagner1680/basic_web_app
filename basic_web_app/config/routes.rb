@@ -1,23 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'comments/index'
-
-  get 'comments/create'
-
-  get 'comments/show'
-
-  get 'posts/index'
-
-  get 'posts/create'
-
-  get 'posts/show'
-
-  get 'users/index'
-
-  get 'users/show'
-
-  get 'users/create'
-
   resources :users
   resources :posts
   resources :comments
