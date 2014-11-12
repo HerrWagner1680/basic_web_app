@@ -21,4 +21,9 @@ class UsersController < ApplicationController
   	end
   		redirect_to "/users"
   end
+
+  def new 
+	@user = User.new
+  end
+  
 end
