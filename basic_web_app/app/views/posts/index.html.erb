@@ -11,7 +11,7 @@
   <% @post.each do |post| %>
       <p class="text"><%= post.text %></p>
       <small><em><%= "--- writ by #{ post.user.fname } #{ post.user.lname }"%></em></small>
-      <a href "#">ADD A COMMENT</a>
+      <a href=<%="#{post.id}/comments/new"%>>ADD A COMMENT</a>
       <br>
       <br>
   <% end %>

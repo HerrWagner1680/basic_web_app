@@ -14,6 +14,10 @@ class CommentsController < ApplicationController
   	redirect_to "/posts"
   end
 
+  def new
+    @comment = Comment.new
+  end
+
   def show
   	@comment = Comment.find(params[:id])
   	# @current_user = User.find(session[:user_id])
