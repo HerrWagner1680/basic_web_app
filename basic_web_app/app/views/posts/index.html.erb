@@ -1,4 +1,12 @@
-<h1>JUST LIST ALL POSTS</h1>
+<h2>ALL POSTS</h2>
 
 
+<% if @post %>
+  <% @post.each do |post| %>
+      <p class="text"><%= post.text %></p>
+      <small><em>By: <%= post.user.fname %></em></small>
+      <br>
+      <br>
+  <% end %>
+<% end %>
 
