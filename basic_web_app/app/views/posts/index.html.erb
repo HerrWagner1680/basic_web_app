@@ -4,7 +4,7 @@
 <% if @post %>
   <% @post.each do |post| %>
       <p class="text"><%= post.text %></p>
-      <small><em>By: <%= post.user.fname %></em></small>
+      <small><em><%= "--- writ by #{ post.user.fname } #{ post.user.lname }"%></em></small>
       <br>
       <br>
   <% end %>
