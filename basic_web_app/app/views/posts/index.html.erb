@@ -5,7 +5,7 @@
   <% @post.each do |post| %>
       <p class="text"><%= post.text %></p>
       <small><em><%= "--- writ by #{ post.user.fname } #{ post.user.lname }"%></em></small>
-      <a href=<%="#{post.id}/comments/new"%>>ADD A COMMENT</a>
+      <a href=<%="posts/#{post.id}/comments/new"%>>ADD A COMMENT</a>
       <h4>COMMENTS</h4>
 
       <% if post.comments %>

@@ -3,3 +3,12 @@
 
 <h1>CREATE COMMENT</h1>
 <p>[place text area form here]<p>
+
+<%= form_for @comment do |f| %>
+  <%= f.text_field :fname , :placeholder => "First Name"%>
+  <%= f.text_field :lname, :placeholder =>"Last Name"%>
+  <%= f.email_field :email, :placeholder => "Email" %>
+  <%= f.password_field :password, :placeholder => "Password" %>
+  <%= f.submit %>
+<% end %>
+

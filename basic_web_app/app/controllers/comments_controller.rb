@@ -5,7 +5,8 @@ class CommentsController < ApplicationController
 
   def create
   	@comment = Comment.new(text: params[:comment][:text],
-  					user_id: session[:user_id])
+  					user_id: session[:user_id],
+            post_id: params[:comment][:post_id])
   	if @comment.save
   		flash[:notice] = "Comment Created"
   	else
