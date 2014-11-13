@@ -1,22 +1,18 @@
 <h2>ALL POSTS</h2>
 
-<h4>COMMENTS</h4>
-<% if Comment.all %>
-<% Comment.all.each do |comment| %>
-	<p><%=" TEXT: #{ comment.text } POST_ID: #{ comment.post_id } BY: #{ comment.user.fname } #{ comment.user.lname }" %></p>
-  <% end %>
-<% end %>
 
 <% if @post %>
   <% @post.each do |post| %>
       <p class="text"><%= post.text %></p>
       <small><em><%= "--- writ by #{ post.user.fname } #{ post.user.lname }"%></em></small>
       <a href=<%="#{post.id}/comments/new"%>>ADD A COMMENT</a>
-      <h4>RELATED COMMENTS</h4>
+      <h4>COMMENTS</h4>
 
-      <% if Comment.all %>
-		<% Comment.all.each do |comment| %>
-			<p><%=" TEXT: #{ comment.text } POST_ID: #{ comment.post_id } BY: #{ comment.user.fname } #{ comment.user.lname }" %></p>
+      <% if post.comments %>
+		<% post.comments.each do |comment| %>
+
+		<h5><%="#{comment.text}  --- reply by #{ comment.user.fname } #{ comment.user.lname}"%></h5>
+
 		  <% end %>
 		<% end %>
 
