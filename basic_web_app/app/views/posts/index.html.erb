@@ -12,6 +12,14 @@
       <p class="text"><%= post.text %></p>
       <small><em><%= "--- writ by #{ post.user.fname } #{ post.user.lname }"%></em></small>
       <a href=<%="#{post.id}/comments/new"%>>ADD A COMMENT</a>
+      <h4>RELATED COMMENTS</h4>
+
+      <% if Comment.all %>
+		<% Comment.all.each do |comment| %>
+			<p><%=" TEXT: #{ comment.text } POST_ID: #{ comment.post_id } BY: #{ comment.user.fname } #{ comment.user.lname }" %></p>
+		  <% end %>
+		<% end %>
+
       <br>
       <br>
   <% end %>
