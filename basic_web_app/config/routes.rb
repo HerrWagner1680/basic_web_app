@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root :to => "users#index"
+
   delete 'sessions/destroy' => 'sessions#destroy'
 
   resources :homes, only: [:index]
