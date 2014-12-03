@@ -17,7 +17,7 @@
 
 	<li><a href="/posts">POSTS</a></li>
 
-	<li><a href="#">LOGOUT</a></li> <!-- should redirect to original signin page -->
+	<li><%= link_to ("LOGOUT"),"/sessions/destroy",method: :delete %></li> <!-- should redirect to original signin page -->
 </ul>
 
 
