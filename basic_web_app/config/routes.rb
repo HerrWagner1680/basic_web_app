@@ -2,8 +2,6 @@ Rails.application.routes.draw do
 
   get 'posts/index'
 
-  get 'home/index'
-
   root :to => "users#index"
 
   delete 'sessions/destroy' => 'sessions#destroy'

@@ -4,7 +4,6 @@ class HomesController < ApplicationController
 		@post = Post.all
 	end
 
-
 end
 
 
