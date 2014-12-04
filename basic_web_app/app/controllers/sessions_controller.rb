@@ -1,7 +1,9 @@
 class SessionsController < ApplicationController
   def create
-  	@users = User.where(email: params[:email]).first
-
+  	@user = User.where(email: params[:email]).first
+    puts "SESSION USER ID BELOW"
+    p session[:user_id]
+    p params[:password]
   	if @user && @user.password == params[:password]
   		session[:user_id] = @user.id
   		flash[:notice] = "Successfully Logged In"
@@ -9,7 +11,7 @@ class SessionsController < ApplicationController
   		flash[:alert] = "Your credentials do not match"
   	end
 
-  	redirect_to "/users/#{ @user.id }"
+  	redirect_to "/users/#{session[:user_id]}"
   end
 
   def new
