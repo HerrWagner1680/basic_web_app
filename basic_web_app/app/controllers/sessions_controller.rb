@@ -1,9 +1,6 @@
 class SessionsController < ApplicationController
   def create
   	@user = User.where(email: params[:email]).first
-    puts "SESSION USER ID BELOW"
-    p session[:user_id]
-    p params[:password]
   	if @user && @user.password == params[:password]
   		session[:user_id] = @user.id
   		flash[:notice] = "Successfully Logged In"
