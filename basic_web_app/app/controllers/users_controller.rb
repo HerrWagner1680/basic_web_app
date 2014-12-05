@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def show
   	@user = User.find(params[:id])
   	current_user
+    @post = Post.where(user_id: session[:user_id])
   end
 
   def create

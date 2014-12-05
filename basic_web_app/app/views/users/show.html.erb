@@ -1,2 +1,22 @@
-<h1>Users#show</h1>
+<p>Users#show</p>
 <p>Find me in app/views/users/show.html.erb</p>
+
+<h1>THIS IS HOME PAGE</h1>
+<h4>The Join Us / Login should redirect you here</h4>
+
+<h2> First Name: <%= @user.fname %></h2>
+<h2> Last Name: <%= @user.lname %></h2>
+<h2> Email: <%= @user.email %></h2>
+
+<em>Session user id</em>
+<%= session[:user_id] %>
+
+<%= render "posts/new" %>
+
+<h3>render posts#show aka GET /posts/:id/ </h3>
+<%= render "posts/show" %>
+
+<h4>On right column, have text area form</h4>
+<h4>to create new post.</h4>
+
+<h5>Below that, list most recent posts by user</h5>
