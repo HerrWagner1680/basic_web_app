@@ -16,17 +16,17 @@ class UsersController < ApplicationController
   	else
   		flash[:alert] = "Last Chance To Turn Away"
   	end
-  		redirect_to "/homes"
+  	redirect_to "/homes"
   end
 
   def new 
-	@user = User.new
+  	@user = User.new
   end
 
-private
+  private
 
-def user_params
-  params.require(:user).permit(:fname, :lname, :email, :password)
-end
+  def user_params
+    params.require(:user).permit(:fname, :lname, :email, :password)
+  end
   
 end
