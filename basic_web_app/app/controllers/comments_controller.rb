@@ -1,6 +1,5 @@
 class CommentsController < ApplicationController
   def index
-
   end
 
   def create
@@ -22,7 +21,6 @@ class CommentsController < ApplicationController
 
   def show
   	@comment = Comment.find(params[:id])
-  	# @current_user = User.find(session[:user_id])
   end
 
   private

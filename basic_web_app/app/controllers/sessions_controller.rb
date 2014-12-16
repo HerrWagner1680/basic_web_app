@@ -7,7 +7,6 @@ class SessionsController < ApplicationController
   	else
   		flash[:alert] = "Your credentials do not match"
   	end
-
   	redirect_to "/users/#{session[:user_id]}"
   end
 
